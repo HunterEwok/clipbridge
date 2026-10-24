@@ -167,6 +167,10 @@ All notable changes to clipboardbridge are documented in this file. The format f
 
 ### Fixed
 
+- An update without a terminal over an installation from before the firewall question no
+  longer removes the firewall rules it had added: rules that are there without a kept answer
+  count as an earlier Yes (Linux, macOS, Windows), and with no terminal and no answer nothing
+  is added or removed. `cbb global` returns only once a service it restarted answers again.
 - The phones' one button no longer puts the computers' older text over a clipboard it could
   not read (paste not allowed, or not text): it leaves the clipboard as it is and says so,
   with the details in debug builds.
